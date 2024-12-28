@@ -1,0 +1,154 @@
+1. hotel
+Tipo de hotel donde se realizó la reserva:
+Resort Hotel: Hotel de tipo resort.
+City Hotel: Hotel ubicado en zonas urbanas.
+
+2. is_canceled
+Indicador de cancelación:
+0: La reserva no fue cancelada.
+1: La reserva fue cancelada.
+
+3. lead_time
+Días entre la fecha de reserva y la fecha de llegada.
+
+4. arrival_date_year
+Año de llegada del cliente al hotel.
+
+5. arrival_date_month
+Mes de llegada del cliente al hotel (por ejemplo, "January", "February").
+
+6. arrival_date_week_number
+Número de la semana en el año correspondiente a la fecha de llegada.
+
+7. arrival_date_day_of_month
+Día del mes en que el cliente llega al hotel.
+
+8. stays_in_weekend_nights
+Número de noches que el cliente se queda durante fines de semana (viernes y sábado).
+
+9. stays_in_week_nights
+Número de noches que el cliente se queda durante días entre semana (de lunes a jueves).
+
+10. adults
+Número de adultos incluidos en la reserva.
+
+11. children
+Número de niños (mayores de 2 años) incluidos en la reserva.
+
+12. babies
+Número de bebés (de 2 años o menores) incluidos en la reserva.
+
+13. meal
+Tipo de comida incluida en la reserva:
+BB: Bed and Breakfast (desayuno incluido).
+HB: Half Board (desayuno y una comida).
+FB: Full Board (desayuno, comida y cena).
+SC: Self Catering (sin alimentos incluidos).
+
+14. country
+Código del país del cliente (ISO 3166-1 Alpha-3).
+
+15. market_segment
+Segmento de mercado de la reserva:
+Direct: Reserva realizada directamente con el hotel.
+Corporate: A través de una empresa.
+Online TA: Agencia de viajes en línea.
+Otros.
+
+16. distribution_channel
+Canal de distribución utilizado:
+Direct, Corporate, TA/TO (Tour Operator/Travel Agent), entre otros.
+
+17. is_repeated_guest
+Indicador de si el cliente es recurrente:
+0: Cliente nuevo.
+1: Cliente recurrente.
+
+18. previous_cancellations
+Número de reservas anteriores realizadas por el cliente que fueron canceladas.
+
+19. previous_bookings_not_canceled
+Número de reservas anteriores realizadas por el cliente que no fueron canceladas.
+
+20. reserved_room_type
+Tipo de habitación solicitada en la reserva.
+
+21. assigned_room_type
+Tipo de habitación asignada al cliente al check-in (puede diferir del tipo solicitado).
+
+22. booking_changes
+Número de modificaciones realizadas a la reserva.
+
+23. deposit_type
+Tipo de depósito realizado:
+No Deposit: Sin depósito.
+Refundable: Depósito reembolsable.
+Non Refund: Depósito no reembolsable.
+
+24. agent
+Identificador del agente que realizó la reserva (si aplica).
+
+25. company
+Identificador de la compañía que realizó la reserva (si aplica).
+
+26. days_in_waiting_list
+Número de días que la reserva estuvo en lista de espera antes de ser confirmada.
+
+27. customer_type
+Tipo de cliente:
+Transient: Reservas independientes (no parte de un grupo).
+Contract: Clientes bajo contratos.
+Group: Reservas grupales.
+Transient-Party: Combinación de transitorios y grupos pequeños.
+
+28. adr
+Ingreso promedio diario por habitación (Average Daily Rate), en una unidad monetaria.
+
+29. required_car_parking_spaces
+Número de espacios de estacionamiento solicitados por el cliente.
+
+30. total_of_special_requests
+Número total de solicitudes especiales hechas por el cliente (por ejemplo, cama extra, habitación silenciosa).
+
+31. reservation_status
+Estado final de la reserva:
+Canceled: Cancelada.
+Check-Out: El cliente realizó el check-out.
+No-Show: El cliente no se presentó.
+
+32. reservation_status_date
+Fecha en que se registró el estado final de la reserva.
+
+Indicadores clave (KPIs)
+Con el Data Warehouse, puedes calcular:
+Porcentaje de cancelaciones: (Total Cancelaciones/Total Reservas)×100 
+Ingreso promedio por reserva (ADR): Suma de adr / Total de reservas.
+Tasa de huéspedes recurrentes: (Huespedes recurrentes/Total Huespedes)×100(Huepedes recurrentes/Total Huespedes)×100.
+Porcentaje de reservas por canal o mercado.
+Ocupación promedio: Número de noches ocupadas / Capacidad total.
+
+El dataset contiene información resumida de cada reserva que pasa por los hoteles, lo cual incluye aspectos como:
+
+Datos de la reserva:
+
+Fechas de llegada y duración de la estadía.
+Tipo de habitación reservada y asignada.
+Estado de la reserva (confirmada, cancelada, no-show).
+Métodos utilizados para reservar (segmento de mercado y canal de distribución).
+Características del cliente:
+
+Información demográfica mínima, como país de origen y si son clientes recurrentes.
+Número de adultos, niños y bebés asociados a la reserva.
+Resultados de la reserva:
+
+Si fue cancelada o no.
+Cambios realizados a la reserva.
+Solicitudes especiales o necesidades específicas, como estacionamiento.
+Información financiera:
+
+Ingreso promedio diario por habitación (adr).
+Depósitos realizados (tipo y si fueron reembolsables).
+Variables operativas:
+
+Tiempo de anticipación (lead_time) para planificar las operaciones del hotel.
+Días en lista de espera (days_in_waiting_list).
